@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Shoog Alharbi | App Developer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #000;
+      color: #fff;
+      line-height: 1.8;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav li {
+      cursor: pointer;
+    }
+
+    .contact-btn {
+      padding: 10px 20px;
+      background: white;
+      color: black;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 80px 20px 40px;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .cta {
+      padding: 10px 30px;
+      background: white;
+      color: black;
+      border: none;
+      border-radius: 20px;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+
+    section {
+      text-align: center;
+      padding: 60px 20px 40px;
+    }
+
+    section h2 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    section p.description {
+      font-size: 16px;
+      color: #ccc;
+      max-width: 600px;
+      margin: 0 auto 30px;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+      padding: 0 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .service-box {
+      background: #111;
+      padding: 20px;
+      border-radius: 10px;
+      border: 1px solid #444;
+      font-size: 16px;
+    }
+
+    .controls {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .controls button {
+      padding: 8px 15px;
+      background-color: #444;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    a {
+      color: #66ccff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    #matrix {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      background: black;
+    }
+
+    .rtl {
+      direction: rtl;
+      text-align: right;
+    }
+
+    .ltr {
+      direction: ltr;
+      text-align: left;
+    }
+  </style>
+</head>
+<body class="ltr">
+  <canvas id="matrix"></canvas>
+
+  <div class="container">
+
+    <header>
+      <nav>
+        <div class="logo">Shoog</div>
+        <ul>
+          <li>Home</li>
+          <li>Projects</li>
+          <li>Skills</li>
+          <li>About</li>
+          <li>Contact</li>
+        </ul>
+        <button class="contact-btn">Contact</button>
+      </nav>
+    </header>
+
+    <div class="controls">
+      <button onclick="toggleLanguage()">🌐 Switch Language</button>
+    </div>
+
+    <!-- English -->
+    <div id="content-en">
+      <section class="hero">
+        <h1>Shoog Alharbi</h1>
+        <p>I’m a student majoring in <strong>App Development</strong> and passionate about building iOS & Android applications.</p>
+        <button class="cta">Explore My Work</button>
+      </section>
+
+      <section>
+        <h2>💡 About Me</h2>
+        <p class="description">I love turning ideas into real applications. I'm always learning something new, especially in UI/UX and mobile development.</p>
+        <p>I believe every simple project is a step toward becoming a professional.</p>
+      </section>
+
+      <section>
+        <h2>✨ My Skills</h2>
+        <p class="description">Here are the tools and languages I use to bring my ideas to life:</p>
+        <div class="service-grid">
+          <div class="service-box">HTML</div>
+          <div class="service-box">CSS</div>
+          <div class="service-box">Java</div>
+          <div class="service-box">Swift</div>
+          <div class="service-box">Android Studio</div>
+          <div class="service-box">Figma</div>
+        </div>
+      </section>
+
+      <section>
+        <h2>📱 Favorite Projects</h2>
+        <p class="description">Some of the projects I'm proud of working on:</p>
+        <div class="service-grid">
+          <div class="service-box">Age Calculator App</div>
+          <div class="service-box">"Nomo" – Self Development App</div>
+          <div class="service-box">Figma UI Designs</div>
+        </div>
+      </section>
+
+      <section>
+        <h2>✉️ Contact Me</h2>
+        <p class="description">Feel free to reach out through any of the links below:</p>
+        <p>Email: yourname@example.com</p>
+        <p>
+          <a href="#">LinkedIn</a> |
+          <a href="#">Twitter (X)</a> |
+          <a href="#">Behance</a>
+        </p>
+      </section>
+    </div>
+
+    <!-- Arabic -->
+    <div id="content-ar" style="display:none;">
+      <section class="hero">
+        <h1>شوق الحربي</h1>
+        <p>أنا طالبة في تخصص <strong>برمجة التطبيقات</strong> ومهتمة ببناء تطبيقات iOS و Android.</p>
+        <button class="cta">استعرض مشاريعي</button>
+      </section>
+
+      <section>
+        <h2>💡 عني</h2>
+        <p class="description">أحب تحويل الأفكار إلى تطبيقات حقيقية. أستمتع باكتشاف الجديد في تصميم واجهات المستخدم وتطوير التطبيقات.</p>
+        <p>كل مشروع بسيط هو خطوة نحو الاحتراف بإذن الله.</p>
+      </section>
+
+      <section>
+        <h2>✨ المهارات</h2>
+        <p class="description">هذه هي الأدوات واللغات التي أستخدمها لتطبيق أفكاري:</p>
+        <div class="service-grid">
+          <div class="service-box">HTML</div>
+          <div class="service-box">CSS</div>
+          <div class="service-box">Java</div>
+          <div class="service-box">Swift</div>
+          <div class="service-box">Android Studio</div>
+          <div class="service-box">Figma</div>
+        </div>
+      </section>
+
+      <section>
+        <h2>📱 المشاريع</h2>
+        <p class="description">بعض المشاريع التي أفتخر بها:</p>
+        <div class="service-grid">
+          <div class="service-box">تطبيق حساب العمر</div>
+          <div class="service-box">تطبيق "نمو" لتطوير الذات</div>
+          <div class="service-box">تصاميم باستخدام Figma</div>
+        </div>
+      </section>
+
+      <section>
+        <h2>✉️ تواصل معي</h2>
+        <p class="description">تواصلي معي عبر:</p>
+        <p>البريد الإلكتروني: shoogalharbi26@Gmail.com</p>
+        <p>
+          <a href="#">LinkedIn</a> |
+          <a href="#">X (تويتر)</a> |
+          <a href="#">Behance</a>
+        </p>
+      </section>
+    </div>
+
+  </div>
+
+  <script>
+    const canvas = document.getElementById('matrix');
+    const ctx = canvas.getContext('2d');
+    canvas.height = window.innerHeight;
+    canvas.width = window.innerWidth;
+    const binary = "01";
+    const chars = binary.split("");
+    const fontSize = 14;
+    const columns = canvas.width / fontSize;
+    const drops = Array.from({ length: columns }).fill(1);
+    function draw() {
+      ctx.fillStyle = "rgba(0, 0, 0, 0.1)";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = "#0044ff";
+      ctx.font = fontSize + "px monospace";
+      for (let i = 0; i < drops.length; i++) {
+        const text = chars[Math.floor(Math.random() * chars.length)];
+        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+        if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+          drops[i] = 0;
+        }
+        drops[i]++;
+      }
+    }
+    setInterval(draw, 33);
+
+    let currentLang = 'en';
+    function toggleLanguage() {
+      const en = document.getElementById('content-en');
+      const ar = document.getElementById('content-ar');
+      const body = document.body;
+      if (currentLang === 'en') {
+        en.style.display = 'none';
+        ar.style.display = 'block';
+        body.classList.remove('ltr');
+        body.classList.add('rtl');
+        currentLang = 'ar';
+      } else {
+        en.style.display = 'block';
+        ar.style.display = 'none';
+        body.classList.remove('rtl');
+        body.classList.add('ltr');
+        currentLang = 'en';
+      }
+    }
+  </script>
+</body>
+</html>
